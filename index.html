@@ -19,12 +19,18 @@
             background-attachment: fixed; /* Ensures the background stays fixed when scrolling */
         }
         .section-title {
-            font-size: 4rem; /* Large font size for section titles */
+            /* Responsive font size for section titles */
+            font-size: 2.5rem; /* Default for mobile */
             font-weight: 700;
             color: #1a1a1a; /* Dark text color for contrast */
         }
+        @media (min-width: 768px) { /* md breakpoint */
+            .section-title {
+                font-size: 4rem; /* Larger for desktop */
+            }
+        }
         .nav-link {
-            @apply text-gray-700 hover:text-gray-900 px-4 py-2 rounded-md transition-colors duration-200;
+            @apply text-gray-700 hover:text-gray-900 px-2 py-2 rounded-md transition-colors duration-200 text-sm md:text-base; /* Smaller text on mobile nav */
         }
         /* New highlight color to complement brown */
         .highlight-text {
@@ -62,7 +68,7 @@
 
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 right-0 bg-white bg-opacity-80 backdrop-blur-sm p-4 z-10 shadow-md rounded-b-lg">
-        <div class="container mx-auto flex justify-center space-x-6">
+        <div class="container mx-auto flex flex-wrap justify-center gap-x-2 md:space-x-6"> <!-- Adjusted for mobile wrapping and spacing -->
             <a href="#about" class="nav-link">About me</a>
             <a href="#education" class="nav-link">Education</a>
             <a href="#experience" class="nav-link">Experience</a>
@@ -76,8 +82,8 @@
 
     <!-- Hero Section -->
     <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center p-8 pt-24">
-        <h1 class="text-8xl md:text-9xl font-extrabold text-gray-900 mb-4">Portfolio</h1>
-        <p class="text-3xl md:text-4xl text-gray-700 font-medium">Shubham Raj</p>
+        <h1 class="text-5xl md:text-9xl font-extrabold text-gray-900 mb-4">Portfolio.</h1> <!-- Smaller on mobile -->
+        <p class="text-xl md:text-4xl text-gray-700 font-medium">Shubham Raj</p> <!-- Smaller on mobile -->
         
     </section>
 
@@ -104,7 +110,7 @@
     <section id="education" class="min-h-screen flex items-center justify-center p-8 content-bg rounded-lg shadow-lg mx-auto max-w-7xl my-12 animated-section">
         <div class="flex flex-col md:flex-row items-center md:space-x-12">
             <div class="md:w-1/2">
-                <img src="assets/college.jpeg" alt="Indian Institute of Technology Patna" class="w-full h-auto object-cover rounded-xl shadow-lg">
+                <img src="assets/college.png" alt="Indian Institute of Technology Patna" class="w-full h-auto object-cover rounded-xl shadow-lg">
             </div>
             <div class="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
                 <h2 class="section-title mb-6">Education</h2>
