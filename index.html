@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5; /* Light gray background - fallback if image fails */
+        }
+        .crumpled-paper-bg {
+            background-image: url('assets/brown-wrinkle-paper.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; /* Ensures the background stays fixed when scrolling */
+        }
+        .section-title {
+            font-size: 4rem; /* Large font size for section titles */
+            font-weight: 700;
+            color: #1a1a1a; /* Dark text color for contrast */
+        }
+        .nav-link {
+            @apply text-gray-700 hover:text-gray-900 px-4 py-2 rounded-md transition-colors duration-200;
+        }
+        /* New highlight color to complement brown */
+        .highlight-text {
+            color: #CD853F; /* Peru - an earthy orange-brown */
+        }
+        /* New background for content sections to complement brown */
+        .content-bg {
+            background-color: rgba(255, 250, 240, 0.9); /* A warm, creamy white with 90% opacity */
+        }
+        .tech-icon {
+            width: 60px; /* Adjust size as needed */
+            height: 60px;
+            object-fit: contain;
+            margin: 10px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover effect including box-shadow */
+        }
+        .tech-icon:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8); /* Gold-like glow effect */
+        }
+    </style>
+</head>
+<body class="crumpled-paper-bg">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-white bg-opacity-80 backdrop-blur-sm p-4 z-10 shadow-md rounded-b-lg">
+        <div class="container mx-auto flex justify-center space-x-6">
+            <a href="#about" class="nav-link">About me</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#our-services" class="nav-link">Our Services</a>
+            <a href="#clients" class="nav-link">Clients</a>
+            <a href="#technical-skills" class="nav-link">Technical Skills</a>
+            <a href="#tech-stack" class="nav-link">Tech Stack</a>
+            <a href="#contact" class="nav-link">Get in touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center p-8 pt-24">
+        <h1 class="text-8xl md:text-9xl font-extrabold text-gray-900 mb-4">Portfolio.</h1>
+        <p class="text-3xl md:text-4xl text-gray-700 font-medium">Shubham Raj</p>
+        
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center p-8 content-bg rounded-lg shadow-lg mx-auto max-w-7xl my-12">
+        <div class="flex flex-col md:flex-row items-center md:space-x-12">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="section-title mb-6">About Me</h2>
+                <p class="text-xl md:text-2xl font-semibold text-gray-800 mb-6">I'm Shubham Raj</p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    Hello! I'm **Shubham Raj**, a dedicated and innovative professional passionate about crafting exceptional digital experiences. With a strong foundation in full-stack development, I thrive on bringing ideas to life through robust applications and intuitive user interfaces. My journey in technology has equipped me with a diverse skill set, allowing me to tackle challenges from concept to deployment.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    I am the founder of **PixelNode**, a dynamic agency committed to delivering cutting-edge digital solutions. We specialize in creating bespoke websites, developing high-performance mobile applications, and implementing scalable cloud infrastructure. At PixelNode, our focus is on understanding your vision and translating it into impactful, user-centric products that drive growth and engagement. We pride ourselves on our meticulous approach, attention to detail, and a collaborative spirit that ensures client satisfaction.
+                </p>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <img src="assets/Profile_photo.jpg" alt="Shubham Raj's Photo" class="w-full h-auto object-cover rounded-xl shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="min-h-screen flex items-center justify-center p-8 content-bg rounded-lg shadow-lg mx-auto max-w-7xl my-12">
+        <div class="flex flex-col md:flex-row items-center md:space-x-12">
+            <div class="md:w-1/2">
+                <img src="assets/college.jpeg" alt="Indian Institute of Technology Patna" class="w-full h-auto object-cover rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+                <h2 class="section-title mb-6">Education</h2>
+                <p class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Indian Institute of Technology Patna,</p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    BS degree, specialization in Computer Science and Data Analytics
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    2024 - 2028 (Currently Pursuing)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="min-h-screen flex flex-col items-center justify-center p-8 content-bg rounded-lg shadow-lg mx-auto max-w-7xl my-12">
+        <h2 class="section-title mb-12 text-center">Experience</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+            <div class="text-center p-6 bg-yellow-50 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold highlight-text mb-4">Founder & CEO, PixelNode</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Jan 2024 - Present
+                    <br>
+                    Leading PixelNode, my digital solutions agency, in crafting bespoke websites, high-performance mobile applications, and scalable cloud infrastructure for diverse clients. Overseeing all aspects from strategy to deployment, ensuring innovative and impactful digital experiences.
+                </p>
+            </div>
+            <div class="text-center p-6 bg-yellow-50 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold highlight-text mb-4">Freelance Developer</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    2023 - Present
+                    <br>
+                    Providing independent development services for various clients, including custom website creation, mobile app development, and technical consulting. Specializing in delivering tailored solutions that meet unique business needs and user requirements.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="our-services" class="min-h-screen flex flex-col items-center justify-center p-8 content-bg rounded-lg shadow-lg mx-auto max-w-7xl my-12">
+        <h2 class="section-title mb-12 text-center">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full">
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Web Development</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Building responsive, high-performance web applications using modern frameworks like React, Vue, and Angular.
+                </p>
+            </div>
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Mobile App Development</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Crafting intuitive and robust mobile applications for iOS and Android platforms using native or cross-platform technologies.
+                </p>
+            </div>
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Cloud Solutions & DevOps</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Designing and implementing scalable cloud infrastructure (AWS, Azure, GCP) and streamlining development workflows with DevOps practices.
+                </p>
+            </div>
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">UI/UX Design</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Creating intuitive, engaging, and visually stunning user interfaces and experiences that delight users.
+                </p>
+            </div>
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Custom Software Solutions</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Developing bespoke software tailored to your unique business needs, from concept to deployment.
+                </p>
+            </div>
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Data Analytics & AI</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Leveraging data science, machine learning, and AI to provide insights and automate processes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="min-h-screen flex flex-col items-center justify-center p-8 content-bg rounded-lg shadow-lg mx-auto max-w-7xl my-12">
+        <h2 class="section-title mb-12 text-center">Clients</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Portfolio Website Client</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Developed a stunning and responsive portfolio website for a **videographer and photographer professional**, showcasing their work with elegant design and seamless user experience. Implemented custom animations and SEO best practices to maximize visibility.
+                    <br><br>
+                    <span class="italic text-gray-600">"Shubham's work is truly awesome! He perfectly captured our vision and delivered a website that exceeded our expectations. Highly recommend PixelNode!"</span>
+                </p>
+            </div>
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Startup App Development (Steelsuvidha)</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Led the end-to-end development of a mobile application for the promising startup **Steelsuvidha**. The app features:
+                    <ol class="list-decimal list-inside ml-4 mt-2">
+                        <li>Intuitive UI/UX</li>
+                        <li>Seamless payment integration</li>
+                        <li>Robust real-time data synchronization</li>
+                        <li>Advanced push notifications</li>
+                    </ol>
+                    <br>
+                    <span class="italic text-gray-600">"PixelNode delivered an incredibly user-friendly app for us. The payment integration works flawlessly, and the overall experience is fantastic. A game-changer for Steelsuvidha!"</span>
+                </p>
+            </div>
+            <!-- Add more client examples as needed -->
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">E-commerce Platform Revamp</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Revamped an existing e-commerce platform, focusing on performance optimization, user interface improvements, and integration of new payment gateways. Resulted in a significant increase in conversion rates and customer satisfaction.
+                    <br><br>
+                    <span class="italic text-gray-600">"The e-commerce platform revamp by Shubham and PixelNode was exceptional. Our sales have significantly improved, and customers love the new, faster interface. Truly professional work!"</span>
+                </p>
+            </div>
+            <div class="p-6 bg-yellow-50 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Data Analytics Dashboard (Confidential Client)</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Designed and developed an interactive data analytics dashboard for a **confidential client in the finance industry**. This project involved complex data visualization and robust reporting functionalities, enabling the client to make data-driven decisions while maintaining strict client confidentiality.
+                    <br><br>
+                    <span class="italic text-gray-600">"Despite the confidential nature of our project, Shubham delivered a powerful and insightful data analytics solution. Their professionalism and technical expertise were outstanding."</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="technical-skills" class="min-h-screen flex flex-col items-center justify-center p-8 content-bg rounded-lg shadow-lg mx-auto max-w-7xl my-12">
+        <h2 class="section-title mb-12 text-center">Technical Skill</h2>
+        <div class="w-full text-center">
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                My expertise spans across various cutting-edge technologies and development methodologies, ensuring comprehensive and future-proof solutions.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <div class="p-4 bg-yellow-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Web Development</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Frontend: HTML5, CSS3 (Tailwind CSS, SASS), JavaScript (ES6+), React.js, Vue.js, Angular</li>
+                        <li>Backend: Node.js (Express.js), Python (Django, Flask), Ruby on Rails, PHP (Laravel)</li>
+                        <li>Databases: MongoDB, PostgreSQL, MySQL, Firebase Firestore</li>
+                        <li>APIs: RESTful APIs, GraphQL</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-yellow-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Mobile App Development</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Native iOS: Swift, Xcode</li>
+                        <li>Native Android: Kotlin, Java, Android Studio</li>
+                        <li>Cross-platform: React Native, Flutter</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-yellow-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Cloud Computing & DevOps</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Platforms: AWS (EC2, S3, Lambda, RDS), Google Cloud Platform (GCP - Compute Engine, Cloud Storage, Firebase), Microsoft Azure</li>
+                        <li>Containerization: Docker, Kubernetes</li>
+                        <li>CI/CD: Jenkins, GitLab CI/CD, GitHub Actions</li>
+                        <li>Infrastructure as Code: Terraform, Ansible</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-yellow-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Blockchain Technology</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Concepts: Smart Contracts, Decentralized Applications (dApps)</li>
+                        <li>Platforms: Ethereum, Solana, Polygon</li>
+                        <li>Languages: Solidity</li>
+                        <li>Tools: Web3.js, Ethers.js, Truffle, Hardhat</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-yellow-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">AI/ML & Data Science</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Languages: Python (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch)</li>
+                        <li>Concepts: Machine Learning Algorithms, Deep Learning, Natural Language Processing (NLP)</li>
+                        <li>Tools: Jupyter Notebooks</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-yellow-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Other Relevant Skills</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Version Control: Git, GitHub, GitLab, Bitbucket</li>
+                        <li>Project Management: Agile, Scrum, Jira, Trello</li>
+                        <li>Design Tools: Figma, Adobe XD (for UI/UX collaboration)</li>
+                        <li>Security: OAuth, JWT, SSL/TLS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Our Tech Stack Section -->
+<section id="tech-stack" class="min-h-screen flex flex-col items-center justify-center p-8 content-bg rounded-lg shadow-lg mx-auto max-w-7xl my-12">
+    <h2 class="section-title mb-12 text-center">Our Tech Stack</h2>
+    <div class="flex flex-wrap justify-center items-center gap-6">
+        <!-- Frontend -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" class="tech-icon">
+
+        <!-- Backend -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-icon">
+
+        <!-- Mobile -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" alt="iOS" class="tech-icon">
+
+        <!-- Cloud -->
+        <!-- Corrected AWS logo URL and added onerror for fallback -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" class="tech-icon" onerror="this.onerror=null;this.src='https://placehold.co/60x60/FF9900/FFFFFF?text=AWS';">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" class="tech-icon">
+
+        <!-- DevOps -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-icon">
+
+        <!-- Database -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon">
+
+        <!-- Tools & Design -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" class="tech-icon">
+
+        <!-- AI/ML -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" class="tech-icon">
+    </div>
+</section>
+
+
+    <!-- Get in Touch Section -->
+    <section id="contact" class="min-h-screen flex items-center justify-center p-8 content-bg rounded-lg shadow-lg mx-auto max-w-7xl my-12">
+        <div class="flex flex-col md:flex-row items-center md:space-x-12">
+            <div class="md:w-1/2">
+                <img src="assets/p.png" alt="Contact Photo" class="w-full h-auto object-cover rounded-xl shadow-lg">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+                <h2 class="section-title mb-6">Get in touch</h2>
+                <p class="text-xl text-gray-800 mb-4">Agency Email: <span class="highlight-text font-semibold">pixelnodeofficial@gmail.com</span></p>
+                <p class="text-xl text-gray-800 mb-4">Personal Email: <span class="highlight-text font-semibold">shubham748856@gmail.com</span></p>
+                <p class="text-xl text-gray-800">Phone Number: <span class="highlight-text font-semibold">+91 99424 98114</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section id="thank-you" class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+        <h2 class="text-8xl md:text-9xl font-extrabold text-gray-900 mb-4">Thank You</h2>
+        
+    </section>
+
+</body>
+</html>
